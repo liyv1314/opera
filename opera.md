@@ -1,10 +1,10 @@
 # 戏曲小程序接口文档
 
-1. ~~轮播图接口~~
+1. 首页轮播图接口
 
-   ~~/slide~~
+   **/api/home/slides/id/1**
 
-   ~~返回值 标题、链接地址、图片~~
+   返回值 一组幻灯片
 
 2. 戏曲分类接口
 
@@ -85,3 +85,4 @@
     ~~/user~~
 
     ~~参数 openid nickname sex language city provice country headimgurl phone[可选]~~
+
