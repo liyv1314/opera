@@ -8,7 +8,7 @@
 
 2. 戏曲分类接口
 
-   **/api/opera/categories**
+   **/api/opera/cate**
 
    返回值
 
@@ -16,9 +16,7 @@
 
 3. 分剧种获取视频列表接口
 
-   **opera/operas/cate/:category_id**
-
-   参数 cate_id num is_tuijian rows pages
+   **/api/opera/operas/cate/:category_id**
 
    返回值 视频列表
 
@@ -26,15 +24,21 @@
 
    ~~参数 person_id~~
 
-5. 获取视频接口
+5. 获取视频列表接口
 
-   **opera/operas/read/:id**
+   **/api/opera/operas**
+
+   返回值 视频列表
+
+6. 获取视频接口
+
+   **/api/opera/operas/read/:id**
 
    参数 id
 
    返回值 视频详情
 
-6. ~~评论接口 添加评论 删除评论~~
+7. ~~评论接口 添加评论 删除评论~~
 
    ~~/commet~~
 
@@ -44,31 +48,31 @@
 
    ~~参数 user_id msg_id~~
 
-7. ~~资讯分类接口~~
+8. 资讯分类接口
 
-   ~~/infoCate~~
+   **/api/portal/cate**
 
-   ~~返回值 资讯分类~~
+   返回值 资讯分类
 
-8. ~~资讯列表接口~~
+9. 资讯列表接口
 
-   ~~/infoList~~
+   **/api/portal/articles**
 
-   ~~返回值 资讯列表~~
+   返回值 资讯列表
 
-9. ~~资讯详情接口~~
+10. 资讯详情接口
 
-   ~~/info~~
+   **/api/portal/articles/read/:id**
 
-   ~~返回值 资讯详情~~
+   返回值 资讯详情
 
-10. ~~资讯评论接口~~
+11. ~~资讯评论接口~~
 
-  ~~/infoCommet~~
+   ~~/infoCommet~~
 
-  ~~参数 user_id info_id msg~~
+   ~~参数 user_id info_id msg~~
 
-11. ~~观看历史接口~~
+12. ~~观看历史接口~~
 
     ~~/history~~
 
@@ -76,7 +80,7 @@
 
     ~~返回值 观看历史列表~~
 
-12. ~~用户信息接口~~
+13. ~~用户信息接口~~
 
     ~~/user~~
 
