@@ -30,7 +30,7 @@
 
    返回值 视频列表
 
-6. 获取视频接口
+6. 获取某个视频接口
 
    **/api/opera/operas/read/:id**
 
@@ -38,41 +38,123 @@
 
    返回值 视频详情
 
-7. ~~评论接口 添加评论 删除评论~~
+7. 某个戏曲所有评论接口
 
-   ~~/commet~~
+   **/api/user/opera_comments**
 
-   ~~参数 user_id video_id msg~~
+   参数 
 
-   ~~/delCommet~~
+   object_id =32（戏曲id）
 
-   ~~参数 user_id msg_id~~
+   table_name=opera_post（关联戏曲的表名）
 
-8. 资讯分类接口
+8. 添加评论 ~~删除评论~~
 
-   **/api/portal/cate**
+   **/api/user/opera_comments**
 
-   返回值 资讯分类
+   post
 
-9. 资讯列表接口
+   参数
 
-   **/api/portal/articles**
+   object_id （资讯id）
+   table_name （portal_post）
+   url （当前资讯的url）
+   content （评论内容）
 
-   返回值 资讯列表
+9. 获取收藏列表【喜欢】
 
-10. 资讯详情接口
+   **/api/user/opera_favorites/my**
+
+   参数
+
+   table_name （opera_post）
+
+10. 戏曲收藏
+
+   **/api/user/opera_favorites**
+
+   post
+
+   参数
+
+   object_id（戏曲id）
+
+   table_name（戏曲所在表 opera_post）
+
+   url 网址
+
+   title 标题
+
+   description 描述
+
+11. 戏曲取消收藏
+
+    **/api/user/opera_favorites/:id**
+
+    delete
+
+    示例：
+
+    > api.request({
+    >
+    > ​          url: 'https://op.chaosii.xin/api/user/opera_favorites/6',
+    >
+    > ​          method: 'DELETE',
+    >
+    > ​          data: {
+    >
+    > ​          },
+    >
+    > ​          success: data => {
+    >
+    > ​            console.log(data)
+    >
+    > ​          }
+    >
+    > ​        });
+
+12. 资讯分类接口
+
+    **/api/portal/cate**
+
+    返回值 资讯分类
+
+13. 资讯列表接口
+
+    **/api/portal/articles**
+
+    返回值 资讯列表
+
+14. 资讯详情接口
 
    **/api/portal/articles/read/:id**
 
    返回值 资讯详情
 
-11. ~~资讯评论接口~~
+15. 某条资讯所有评论接口
 
-   ~~/infoCommet~~
+   **/api/user/comments**
 
-   ~~参数 user_id info_id msg~~
+   参数 
 
-12. ~~观看历史接口~~
+   object_id =32（资讯id）
+
+   table_name=portal_post（关联资讯的表名）
+
+16. 增加资讯评论
+
+    **/api/user/comments**
+
+    post
+
+    参数
+
+    object_id （资讯id）
+    table_name （portal_post）
+    url （当前资讯的url）
+    content （评论内容）
+
+17. ~~观看历史接口~~
 
     ~~/history~~
 
@@ -80,7 +162,7 @@
 
     ~~返回值 观看历史列表~~
 
-13. ~~用户信息接口~~
+18. ~~用户信息接口~~
 
     ~~/user~~
 
