@@ -18,7 +18,13 @@
 
    **/api/opera/operas/cate/:category_id**
 
-   参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
+   参数 
+
+   order=-post_hits（按点击量降序） -create_time（按创建时间降序）
+
+   page 分页查询 如2,3
+
+   limit 限制条数 当此参数存在时，page无效
 
    返回值 视频列表
 
@@ -30,7 +36,13 @@
 
    **/api/opera/operas**
 
-   参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
+   参数 
+
+   order=-post_hits（按点击量降序） -create_time（按创建时间降序）
+
+   page 分页查询 如2,3
+
+   limit 限制条数 当此参数存在时，page无效
 
    返回值 视频列表
 
@@ -75,21 +87,21 @@
 
 10. 戏曲收藏
 
-   **/api/user/opera_favorites**
+  **/api/user/opera_favorites**
 
-   post
+  post
 
-   参数
+  参数
 
-   object_id（戏曲id）
+  object_id（戏曲id）
 
-   table_name（戏曲所在表 opera_post）
+  table_name（戏曲所在表 opera_post）
 
-   url 网址
+  url 网址
 
-   title 标题
+  title 标题
 
-   description 描述
+  description 描述
 
 11. 戏曲取消收藏
 
@@ -129,15 +141,35 @@
 
     参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
 
+    page 分页查询 如2,3
+
+    limit 限制条数 当此参数存在时，page无效
+
+    category_id 分类id，如8
+
     返回值 资讯列表
 
-14. 资讯详情接口
+14. 按分类获取资讯列表
+
+    **/api/portal/articles/cate/:category_id**
+
+    参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
+
+    page 分页查询 如2,3
+
+    limit 限制条数 当此参数存在时，page无效
+
+    category_id 分类id，如8
+
+    返回值 资讯列表
+
+15. 资讯详情接口
 
    **/api/portal/articles/read/:id**
 
    返回值 资讯详情
 
-15. 某条资讯所有评论接口
+16. 某条资讯所有评论接口
 
    **/api/user/comments**
 
@@ -147,7 +179,7 @@
 
    table_name=portal_post（关联资讯的表名）
 
-16. 增加资讯评论
+17. 增加资讯评论
 
     **/api/user/comments**
 
@@ -160,7 +192,7 @@
     url （当前资讯的url）
     content （评论内容）
 
-17. ~~观看历史接口~~
+18. ~~观看历史接口~~
 
     ~~/history~~
 
@@ -168,7 +200,7 @@
 
     ~~返回值 观看历史列表~~
 
-18. ~~用户信息接口~~
+19. ~~用户信息接口~~
 
     ~~/user~~
 
