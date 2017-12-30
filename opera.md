@@ -18,6 +18,8 @@
 
    **/api/opera/operas/cate/:category_id**
 
+   参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
+
    返回值 视频列表
 
 4. ~~分名家获取视频列表接口~~
@@ -27,6 +29,8 @@
 5. 获取视频列表接口
 
    **/api/opera/operas**
+
+   参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
 
    返回值 视频列表
 
@@ -122,6 +126,8 @@
 13. 资讯列表接口
 
     **/api/portal/articles**
+
+    参数 order=-post_hits（按点击量降序） -create_time（按创建时间降序）
 
     返回值 资讯列表
 
