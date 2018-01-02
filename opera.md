@@ -222,11 +222,35 @@
 
     ~~返回值 观看历史列表~~
 
-21. ~~用户信息接口~~
+21. 用户注册登录接口
 
-    ~~/user~~
+    **/api/wxapp/public/login**
 
-    ~~参数 openid nickname sex language city provice country headimgurl phone[可选]~~
+    参考api.js里封装的登录方法
+
+    > wx.login()
+    >
+    > loginRes: 
+    >
+    > {errMsg: "login:ok", code: "0112GjsQ1pIXY81NUIqQ1QnjsQ12Gjst"}
+    >
+    > wx.getUserInfo() 
+    >
+    > res:
+    >
+    > {"errMsg":"getUserInfo:ok","rawData":"{\"nickName\":\"李昱\",\"gender\":1,\"language\":\"zh_CN\",\"city\":\"Weinan\",\"province\":\"Shaanxi\",\"country\":\"CN\",\"avatarUrl\":\"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLHZpXkghnf0HdzHUqdQYpNL6IjNiax9Ar2pBW4sGkevqR5C1yvicQxJHXujPcOA349HYPpb6o6kb0w/0\"}","userInfo":{"nickName":"李昱","gender":1,"language":"zh_CN","city":"Weinan","province":"Shaanxi","country":"CN","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLHZpXkghnf0HdzHUqdQYpNL6IjNiax9Ar2pBW4sGkevqR5C1yvicQxJHXujPcOA349HYPpb6o6kb0w/0"},"signature":"4a591043b462ee4ab3d22e4e83f6c6664fee161e","encryptedData":"Equ+LmDmBesMClq/mxsI9XUqjt4lsr+joKPI4k81QiNVKamnFQMEBvMfhjb7pSVyTO6GGvh+i+UQRAXv+zLYghl1c7Fo8O8XWdVzpsE8MsGAr+SMq8ePWG8XeYvo1Wl9Cg3cO4Tq4WflTdhfqcGpBMe3ztZFBt7fT7qZjvblZBMNFH6ZZkUuudKxVP1KZRKbnreI3bQ+xk6s1BkLfh0Re3uD4vr88F0nyTWXkAwLzx+2l81fHf6G1y2HhwqRQwmSJyLXvv3GX/Oj55Xmk+0S+T7gl5MZ5pVkWTi3nJIHDtQuPIZnsQk6FYSTCPWY7yQkGRdK/n3X/xsG+2BqNwQLoio1a2pv8LSeLUylyCfVV6ld0GVzhqseNj3hj7uWzkWpG6VPry0XfInVSv/utwBJTvREk+8ClqC62fI053UiD3JimKlPeUlPfRFRmEXjyi3tv2wP5Yqx5/4b9cAb8h60DA==","iv":"1Cykswu+WuJhXRJ6vem4CQ=="}
+    >
+    > 参数：
+    >
+    > ​    code: loginRes.code,
+    >
+    > ​    encrypted_data: res.encryptedData,
+    >
+    > ​    iv: res.iv,
+    >
+    > ​    raw_data: res.rawData,
+    >
+    > ​    signature: res.signature
 
 22. 手机验证码接口
 
