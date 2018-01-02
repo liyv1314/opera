@@ -251,7 +251,20 @@
     > ​    raw_data: res.rawData,
     >
     > ​    signature: res.signature
+    >
+    > 返回值:
+    >
+    > ​    token openid userId
+    >
+    > ​    注意保存这三个值
+    >
+    > ​    userId会在观看历史列表接口用到
+    >
+    > ​    openid备用
+    >
+    > ​    token在api.request()方法中用到，可详细查看api.request()
 
 22. 手机验证码接口
 
     **/api/user/sms?username=13772514189**
+
