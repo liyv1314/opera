@@ -119,11 +119,11 @@
 
    table_name（戏曲所在表 opera_post）
 
-   url 网址
-
    title 标题
 
    description 描述
+
+   thumbnail 缩略图
 
 13. 戏曲取消收藏
 
@@ -214,13 +214,11 @@
     url （当前资讯的url）
     content （评论内容）
 
-20. ~~观看历史接口~~
+20. 观看历史接口
 
-    ~~/history~~
+    **/user/history**
 
-    ~~参数 user_id~~
-
-    ~~返回值 观看历史列表~~
+    返回值 观看历史列表
 
 21. 用户注册登录接口
 
@@ -258,13 +256,10 @@
     >
     > ​    注意保存这三个值
     >
-    > ​    userId会在观看历史列表接口用到
-    >
-    > ​    openid备用
+    > ​    userId openid备用
     >
     > ​    token在api.request()方法中用到，可详细查看api.request()
 
 22. 手机验证码接口
 
     **/api/user/sms?username=13772514189**
-
