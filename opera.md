@@ -6,7 +6,17 @@
 
    返回值 一组幻灯片
 
-2. 戏曲分类接口
+2. 首页接口
+
+   **/api/opera/index**
+
+   get
+
+   参数 无
+
+   返回值 幻灯片 分类 以及 4个戏曲
+
+3. 戏曲分类接口
 
    **/api/opera/cate**
 
@@ -14,7 +24,7 @@
 
    所有分类
 
-3. 名家接口
+4. 名家接口
 
    **/api/opera/person**
 
@@ -24,7 +34,7 @@
 
    所有名家
 
-4. 戏曲搜索接口
+5. 戏曲搜索接口
 
    **/api/opera/search**
 
@@ -32,11 +42,13 @@
 
    可以是名家姓名、戏曲名称
 
-5. 分剧种获取视频列表接口
+6. 分剧种获取视频列表接口
 
-   **/api/opera/operas/cate/:category_id**
+   **/api/opera/operas/cate**
 
    参数 
+
+   category_id 分类id
 
    order=-post_hits（按点击量降序） -create_time（按创建时间降序）
 
@@ -46,7 +58,7 @@
 
    返回值 视频列表
 
-6. 分名家获取视频列表接口
+7. 分名家获取视频列表接口
 
    **/api/opera/person/operas?id=5**
 
@@ -54,7 +66,7 @@
 
    id【即名家id】
 
-7. 获取视频列表接口
+8. 获取视频列表接口
 
    **/api/opera/operas**
 
@@ -68,7 +80,7 @@
 
    返回值 视频列表
 
-8. 获取某个视频接口
+9. 获取某个视频接口
 
    **/api/opera/operas/read/:id**
 
@@ -76,7 +88,7 @@
 
    返回值 视频详情
 
-9. 某个戏曲所有评论接口
+10. 某个戏曲所有评论接口
 
    **/api/user/opera_comments**
 
@@ -86,7 +98,7 @@
 
    table_name=opera_post（关联戏曲的表名）
 
-10. 添加评论 ~~删除评论~~
+11. 添加评论 ~~删除评论~~
 
    **/api/user/opera_comments**
 
@@ -99,7 +111,7 @@
    url （当前资讯的url）
    content （评论内容）
 
-11. 获取收藏列表【喜欢】
+12. 获取收藏列表【喜欢】
 
     **/api/user/opera_favorites/my**
 
@@ -107,7 +119,7 @@
 
     table_name （opera_post）
 
-12. 戏曲收藏
+13. 戏曲收藏
 
    **/api/user/opera_favorites**
 
@@ -125,7 +137,7 @@
 
    thumbnail 缩略图
 
-13. 戏曲取消收藏
+14. 戏曲取消收藏
 
     **/api/user/opera_favorites/:id**
 
@@ -151,13 +163,13 @@
     >
     > ​        });
 
-14. 资讯分类接口
+15. 资讯分类接口
 
     **/api/portal/cate**
 
     返回值 资讯分类
 
-15. 资讯列表接口
+16. 资讯列表接口
 
     **/api/portal/articles**
 
@@ -171,7 +183,7 @@
 
     返回值 资讯列表
 
-16. 按分类获取资讯列表
+17. 按分类获取资讯列表
 
     **/api/portal/articles/cate/:category_id**
 
@@ -185,13 +197,13 @@
 
     返回值 资讯列表
 
-17. 资讯详情接口
+18. 资讯详情接口
 
    **/api/portal/articles/read/:id**
 
    返回值 资讯详情
 
-18. 某条资讯所有评论接口
+19. 某条资讯所有评论接口
 
    **/api/user/comments**
 
@@ -201,7 +213,7 @@
 
    table_name=portal_post（关联资讯的表名）
 
-19. 增加资讯评论
+20. 增加资讯评论
 
     **/api/user/comments**
 
@@ -214,13 +226,13 @@
     url （当前资讯的url）
     content （评论内容）
 
-20. 观看历史接口
+21. 观看历史接口
 
     **/user/history**
 
     返回值 观看历史列表
 
-21. 用户注册登录接口
+22. 用户注册登录接口
 
     **/api/wxapp/public/login**
 
@@ -260,6 +272,16 @@
     >
     > ​    token在api.request()方法中用到，可详细查看api.request()
 
-22. 手机验证码接口
+23. 手机验证码接口
 
     **/api/user/sms?username=13772514189**
+
+24. 手机绑定接口
+
+    /api/user/bind
+
+    参数
+
+    mobile
+
+    verification_code
