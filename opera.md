@@ -163,13 +163,57 @@
     >
     > ​        });
 
-15. 资讯分类接口
+15. 戏曲点赞接口
+
+    **/api/user/opera_likes**
+
+    post
+
+    参数
+
+    object_id（戏曲id）
+
+    table_name（戏曲所在表 opera_post）
+
+    title 标题
+
+    description 描述
+
+    thumbnail 缩略图
+
+16. 戏曲取消点赞接口
+
+    **/api/user/opera_likes/:id**
+
+    delete
+
+    示例：
+
+    > api.request({
+    >
+    > ​          url: 'https://op.chaosii.xin/api/user/opera_likes/32',
+    >
+    > ​          method: 'DELETE',
+    >
+    > ​          data: {
+    >
+    > ​          },
+    >
+    > ​          success: data => {
+    >
+    > ​            console.log(data)
+    >
+    > ​          }
+    >
+    > ​ });
+
+17. 资讯分类接口
 
     **/api/portal/cate**
 
     返回值 资讯分类
 
-16. 资讯列表接口
+18. 资讯列表接口
 
     **/api/portal/articles**
 
@@ -183,7 +227,7 @@
 
     返回值 资讯列表
 
-17. 按分类获取资讯列表
+19. 按分类获取资讯列表
 
     **/api/portal/articles/cate/:category_id**
 
@@ -197,13 +241,13 @@
 
     返回值 资讯列表
 
-18. 资讯详情接口
+20. 资讯详情接口
 
    **/api/portal/articles/read/:id**
 
    返回值 资讯详情
 
-19. 某条资讯所有评论接口
+21. 某条资讯所有评论接口
 
    **/api/user/comments**
 
@@ -213,7 +257,7 @@
 
    table_name=portal_post（关联资讯的表名）
 
-20. 增加资讯评论
+22. 增加资讯评论
 
     **/api/user/comments**
 
@@ -226,13 +270,13 @@
     url （当前资讯的url）
     content （评论内容）
 
-21. 观看历史接口
+23. 观看历史接口
 
     **/user/history**
 
     返回值 观看历史列表
 
-22. 用户注册登录接口
+24. 用户注册登录接口
 
     **/api/wxapp/public/login**
 
@@ -272,11 +316,11 @@
     >
     > ​    token在api.request()方法中用到，可详细查看api.request()
 
-23. 手机验证码接口
+25. 手机验证码接口
 
     **/api/user/sms?username=13772514189**
 
-24. 手机绑定接口
+26. 手机绑定接口
 
     /api/user/bind
 
