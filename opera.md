@@ -107,7 +107,7 @@
    参数
 
    object_id （资讯id）
-   table_name （portal_post）
+   table_name （opera_post）
    url （当前资讯的url）
    content （评论内容）
 
