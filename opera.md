@@ -2,11 +2,11 @@
 
 1. 轮播图接口
 
-   **/api/home/slides**
+   **/api/opera/slides**
 
    参数：
 
-   type = 0,1,2 【0首页 1戏曲分类 2资讯分类】
+   slide_type = 0,1,2 【0首页 1戏曲分类 2资讯分类】
 
    category_id 【可选，只有当type为1和2时】
 
@@ -114,9 +114,9 @@
 
    参数
 
-   object_id （资讯id）
+   object_id （戏曲id）
    table_name （opera_post）
-   url （当前资讯的url）
+   url （当前戏曲的url）
    content （评论内容）
 
 12. 获取收藏列表【喜欢】
