@@ -56,7 +56,15 @@
 
    可以是名家姓名、戏曲名称
 
-7. 分剧种获取视频列表接口
+7. 热门搜索接口
+
+   **/api/opera/hotSearch**
+
+   返回值
+
+   5条次数最多的搜索词
+
+8. 分剧种获取视频列表接口
 
    **/api/opera/operas/cate**
 
@@ -72,7 +80,7 @@
 
    返回值 视频列表
 
-8. 分名家获取视频列表接口
+9. 分名家获取视频列表接口
 
    **/api/opera/person/operas?id=5**
 
@@ -80,7 +88,7 @@
 
    id【即名家id】
 
-9. 获取视频列表接口
+10. 获取视频列表接口
 
    **/api/opera/operas**
 
@@ -96,15 +104,15 @@
 
    返回值 视频列表
 
-10. 获取某个视频接口
+11. 获取某个视频接口
 
-   **/api/opera/operas/read/:id**
+    **/api/opera/operas/read/:id**
 
-   参数 id
+    参数 id
 
-   返回值 视频详情
+    返回值 视频详情
 
-11. 某个戏曲所有评论接口
+12. 某个戏曲所有评论接口
 
    **/api/user/opera_comments**
 
@@ -114,7 +122,7 @@
 
    table_name=opera_post（关联戏曲的表名）
 
-12. 添加评论 ~~删除评论~~
+13. 添加评论 ~~删除评论~~
 
    **/api/user/opera_comments**
 
@@ -127,7 +135,7 @@
    url （当前戏曲的url）
    content （评论内容）
 
-13. 获取收藏列表【喜欢】
+14. 获取收藏列表【喜欢】
 
     **/api/user/opera_favorites/my**
 
@@ -135,7 +143,7 @@
 
     table_name （opera_post）
 
-14. 戏曲收藏
+15. 戏曲收藏
 
    **/api/user/opera_favorites**
 
@@ -153,7 +161,7 @@
 
    thumbnail 缩略图
 
-15. 戏曲取消收藏
+16. 戏曲取消收藏
 
     **/api/user/opera_favorites/:id**
 
@@ -179,7 +187,7 @@
     >
     > ​        });
 
-16. 戏曲点赞接口
+17. 戏曲点赞接口
 
     **/api/user/opera_likes**
 
@@ -197,7 +205,7 @@
 
     thumbnail 缩略图
 
-17. 戏曲取消点赞接口
+18. 戏曲取消点赞接口
 
     **/api/user/opera_likes/:id**
 
@@ -223,13 +231,13 @@
     >
     > ​ });
 
-18. 资讯分类接口
+19. 资讯分类接口
 
     **/api/portal/cate**
 
     返回值 资讯分类
 
-19. 资讯列表接口
+20. 资讯列表接口
 
     **/api/portal/articles**
 
@@ -243,7 +251,7 @@
 
     返回值 资讯列表
 
-20. 按分类获取资讯列表
+21. 按分类获取资讯列表
 
     **/api/portal/articles/cate/:category_id**
 
@@ -257,13 +265,13 @@
 
     返回值 资讯列表
 
-21. 资讯详情接口
+22. 资讯详情接口
 
    **/api/portal/articles/read/:id**
 
    返回值 资讯详情
 
-22. 某条资讯所有评论接口
+23. 某条资讯所有评论接口
 
    **/api/user/comments**
 
@@ -273,7 +281,7 @@
 
    table_name=portal_post（关联资讯的表名）
 
-23. 增加资讯评论
+24. 增加资讯评论
 
     **/api/user/comments**
 
@@ -286,13 +294,13 @@
     url （当前资讯的url）
     content （评论内容）
 
-24. 观看历史接口
+25. 观看历史接口
 
     **/user/history**
 
     返回值 观看历史列表
 
-25. 用户注册登录接口
+26. 用户注册登录接口
 
     **/api/wxapp/public/login**
 
@@ -332,11 +340,11 @@
     >
     > ​    token在api.request()方法中用到，可详细查看api.request()
 
-26. 手机验证码接口
+27. 手机验证码接口
 
     **/api/user/sms?username=13772514189**
 
-27. 手机绑定接口
+28. 手机绑定接口
 
     /api/user/bind
 
