@@ -8,7 +8,7 @@
 
    slide_type = 0,1,2 【0首页 1戏曲分类 2资讯分类】
 
-   category_id 【可选，只有当type为1和2时】
+   category_id 【可选】
 
    返回值 一组幻灯片
 
@@ -40,7 +40,15 @@
 
    所有名家
 
-5. 戏曲搜索接口
+5. 热门名家接口
+
+   **/api/opera/hotPerson**
+
+   返回值
+
+   热门名家
+
+6. 戏曲搜索接口
 
    **/api/opera/search**
 
@@ -48,7 +56,7 @@
 
    可以是名家姓名、戏曲名称
 
-6. 分剧种获取视频列表接口
+7. 分剧种获取视频列表接口
 
    **/api/opera/operas/cate**
 
@@ -64,7 +72,7 @@
 
    返回值 视频列表
 
-7. 分名家获取视频列表接口
+8. 分名家获取视频列表接口
 
    **/api/opera/person/operas?id=5**
 
@@ -72,7 +80,7 @@
 
    id【即名家id】
 
-8. 获取视频列表接口
+9. 获取视频列表接口
 
    **/api/opera/operas**
 
@@ -82,13 +90,13 @@
 
    page 分页查询 如2,3
 
-   limit 限制条数 当此参数存在时，page无效
+   ~~limit 限制条数 当此参数存在时，page无效~~
 
    rows 每页条数
 
    返回值 视频列表
 
-9. 获取某个视频接口
+10. 获取某个视频接口
 
    **/api/opera/operas/read/:id**
 
@@ -96,7 +104,7 @@
 
    返回值 视频详情
 
-10. 某个戏曲所有评论接口
+11. 某个戏曲所有评论接口
 
    **/api/user/opera_comments**
 
@@ -106,7 +114,7 @@
 
    table_name=opera_post（关联戏曲的表名）
 
-11. 添加评论 ~~删除评论~~
+12. 添加评论 ~~删除评论~~
 
    **/api/user/opera_comments**
 
@@ -119,7 +127,7 @@
    url （当前戏曲的url）
    content （评论内容）
 
-12. 获取收藏列表【喜欢】
+13. 获取收藏列表【喜欢】
 
     **/api/user/opera_favorites/my**
 
@@ -127,7 +135,7 @@
 
     table_name （opera_post）
 
-13. 戏曲收藏
+14. 戏曲收藏
 
    **/api/user/opera_favorites**
 
@@ -145,7 +153,7 @@
 
    thumbnail 缩略图
 
-14. 戏曲取消收藏
+15. 戏曲取消收藏
 
     **/api/user/opera_favorites/:id**
 
@@ -171,7 +179,7 @@
     >
     > ​        });
 
-15. 戏曲点赞接口
+16. 戏曲点赞接口
 
     **/api/user/opera_likes**
 
@@ -189,7 +197,7 @@
 
     thumbnail 缩略图
 
-16. 戏曲取消点赞接口
+17. 戏曲取消点赞接口
 
     **/api/user/opera_likes/:id**
 
@@ -215,13 +223,13 @@
     >
     > ​ });
 
-17. 资讯分类接口
+18. 资讯分类接口
 
     **/api/portal/cate**
 
     返回值 资讯分类
 
-18. 资讯列表接口
+19. 资讯列表接口
 
     **/api/portal/articles**
 
@@ -235,7 +243,7 @@
 
     返回值 资讯列表
 
-19. 按分类获取资讯列表
+20. 按分类获取资讯列表
 
     **/api/portal/articles/cate/:category_id**
 
@@ -249,13 +257,13 @@
 
     返回值 资讯列表
 
-20. 资讯详情接口
+21. 资讯详情接口
 
    **/api/portal/articles/read/:id**
 
    返回值 资讯详情
 
-21. 某条资讯所有评论接口
+22. 某条资讯所有评论接口
 
    **/api/user/comments**
 
@@ -265,7 +273,7 @@
 
    table_name=portal_post（关联资讯的表名）
 
-22. 增加资讯评论
+23. 增加资讯评论
 
     **/api/user/comments**
 
@@ -278,13 +286,13 @@
     url （当前资讯的url）
     content （评论内容）
 
-23. 观看历史接口
+24. 观看历史接口
 
     **/user/history**
 
     返回值 观看历史列表
 
-24. 用户注册登录接口
+25. 用户注册登录接口
 
     **/api/wxapp/public/login**
 
@@ -324,11 +332,11 @@
     >
     > ​    token在api.request()方法中用到，可详细查看api.request()
 
-25. 手机验证码接口
+26. 手机验证码接口
 
     **/api/user/sms?username=13772514189**
 
-26. 手机绑定接口
+27. 手机绑定接口
 
     /api/user/bind
 
